@@ -1,0 +1,5 @@
+quando cadastrar redirecionar para o index;
+mensagens de alert em cards no html com temporizador{
+    fazer um alert caso o o usuario nao tiver cadastrado;
+    fazer um alert caso o o usuario for cadastrado com sucesso cadastrado;
+}
