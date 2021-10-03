@@ -54,6 +54,6 @@ salvardb = async () => {
         });
     }
 
-    redirect = () => {window.location.href = "index.html"}
+redirect = () => {window.location.href = "index.html"}
 
     
