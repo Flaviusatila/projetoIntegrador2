@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-        }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-      </style>
-      <link href="signin.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <link href="signin.css" rel="stylesheet">
 </head>
+
 <body>
-    <form class="form-signin" >
-        <h1 class="h3 mb-3 font-weight-normal">Digite User Name e senha</h1>
-        <input type="text" id="userName" class="form-control" placeholder="User Name" required autofocus>
-        <input type="password" id="cadastroSenha" class="form-control" placeholder="Senha" required>
-        <a class="btn btn-lg btn-primary btn-block" onclick="salvar()">Cadastrar</a>
-        <a class="btn btn-lg btn-primary btn-block" href="index.html">Voltar</a>
-      </form>
-      
+  <form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Cadastro</h1>
+    <input type="text" id="nomeCompleto" class="form-control" placeholder="Nome Completo" required autofocus>
+    <br>
+    <input type="text" id="userName" class="form-control" placeholder="User Name" required>
+    <br>
+    <input type="password" id="cadastroSenha" class="form-control" placeholder="Senha" required>
+    <br>
+    <input type="password" id="confimarSenha" class="form-control" placeholder="Confirmar Senha" required>
+    <input class="btn btn-lg btn-primary btn-block" onclick="salvar()" value="Cadastrar">
+    <a class="btn btn-lg btn-primary btn-block" href="index.html">Voltar</a>
+  </form>
+
 </body>
 <script src="../assets/dist/js/cadastro2.js"></script>
+
 </html>
