@@ -1,5 +1,5 @@
+var acertos = 0
 function horizontal(fn) {
-    // console.log("seleção horizontal");
     for (var i = data.colunainicial; i < data.colunafinal + 1; i++) {
         var td = t.rows[data.linhainicial].cells[i];
         if (td.dataset.encontrada == "true") {
@@ -11,7 +11,6 @@ function horizontal(fn) {
     }
 }
 function vertical(fn) {
-    // console.log("seleção vertical");
     for (var i = data.linhainicial; i < data.linhafinal + 1; i++) {
         var td = t.rows[i].cells[data.colunainicial];
         if (td.dataset.encontrada == "true") {
@@ -38,25 +37,15 @@ function comparar(data) {
             selecionados.elementos.push(td);
         });
     }
-    //essa linha aqui usei um operador condicional ternário que vai retorna a palavra selecionada, se ela estiver na lista,
-    //caso a palavra esteja invertida, a primeira condição vai dar falso e vai cair na segunda condicional
-    //que vai inverte a palavra e verificar de novo se tem na lista, caso sim vai retorna ela, caso, não achar mesmo invertendo, vai retorna falso
-    //isso é importante para palavras de cabeça para baixo no quebra cabeça
     var palavraselecionada = transportes.includes(selecionados.palavra) 
                             ? selecionados.palavra 
                             : transportes.includes(selecionados.palavra.split("").reverse().join("")) 
                             ? selecionados.palavra.split("").reverse().join('') 
                             : false;
     if (palavraselecionada) {
-        var el = document.createElement("u");
         numeroPergunta = "pergunta" + (transportes.findIndex((e) => e == palavraselecionada) + 1 )
         document.getElementById(numeroPergunta).style = "text-decoration:line-through;"        
-        // transportes = transportes.filter(function (p) {
-        //     if (palavraselecionada != p) {
-        //         console.log(transportes.indexOf())
-        //         return p;
-        //     }
-        // });
+       
         setTimeout(function () {
             for (var i = 0; i < selecionados.elementos.length; i++) {
                 var elemento = selecionados.elementos[i];
@@ -64,15 +53,8 @@ function comparar(data) {
                 elemento.dataset.encontrada = "true";
             }
         }, 1000);
-        // encontradas += 1;
-        // document.getElementById("encontradas").innerText = "Encontradas: " + encontradas + "\n Restantes: " + transportes.length;
-        // if (transportes.length == 0) {
-            // setTimeout(function () {
-            //     document.getElementById("parabens").hidden = false;
-            //     document.getElementById("btnVoltar").hidden = false;
-            // }, 2000);
-        // }
         data = {};
+        acertos++;
     } else {
         data = {};
         setTimeout(function () {
@@ -91,5 +73,8 @@ function comparar(data) {
                 }
             }, 1000);
         }, 1000);
+    }
+    if(acertos == 7){
+        window.location.replace("./../parabens.html");
     }
 }
