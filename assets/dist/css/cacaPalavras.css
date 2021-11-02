@@ -1,4 +1,64 @@
-*{
+h1,
+h2,
+p{
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
     margin: 0;
-    
+}
+
+@media only screen and (max-width:639px) {
+    #dicas {
+        overflow: unset;
+        height: auto;
+        margin: auto;
+        width: 95%;
+        position: relative;
+    }
+}
+
+
+table {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+    background-color: white;
+}
+
+td {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.6em;
+    color: black;
+}
+
+td:hover {
+    background-color: #F9D387;
+    cursor: pointer;
+}
+
+.selecionada,
+.encontrada,
+.errado {
+    transition: .2s linear;
+}
+
+.selecionada {
+    background-color: lightblue;
+}
+
+.encontrada {
+    background-color: #009688;
+}
+
+.errado {
+    color: red;
 }

@@ -4,36 +4,47 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/dist/css/cacaPalavras.css" rel="stylesheet">
+    <link rel="stylesheet" href="/../assets/dist/css/sideBar.css">
+    <link rel="stylesheet" href="/../assets/dist/css/cacaPalavras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Caça-palavras</title>
 </head>
 
 
 <body onload="iniciaJogo()">
     <div id="jogo" hidden>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>Dicas</header>
+            <a href="#" class="active">
+                <span>
+                    <ol id="dicas">
+                        <li id="pergunta1">É um meio de transporte sob duas rodas.</li>
+                        <li id="pergunta2">É um meio de transporte sob duas rodas.</li>
+                        <li id="pergunta3">É um meio de transporte com vários vagões ligados entre si e pode transportar pessoas ou
+                            cargas.</li>
+                        <li id="pergunta4">É um meio de transporte terrestre que passa por túneis subterrâneos ou por viadutos e
+                            realiza a parada
+                            em estações designadas.
+                        <li id="pergunta5">Meio de transporte usado para pedalar em pistas, ciclovias ou parques.</li>
+                        <li id="pergunta6">É um meio de transporte terrestre grande, com eixos dianteiros e traseiros, geralmente tem
+                            entre quatro
+                            e dezesseis rodas e, tem uma carreta.</li>
+                        <li id="pergunta7">Meio de transporte aquático que tem vela, começa com a letra B e tem cinco letras.</li>
+                    </ol>
+                </span>
+            </a>
+        </div>
+
         <h2 hidden id="parabens">Parabéns!</h2>
         <button hidden id="btnVoltar">voltar</button>
-        <h2>Meios de transportes</h2>
-        <p id="encontradas"></p>
-        <ol id="dicas">
-            <h4 style="text-align:center;">Dicas</h4>
-            <li>É um meio de transporte terrestre que, geralmente, cabe cinco pessoas.</li>
-            <li>É um meio de transporte sob duas rodas.</li>
-            <li>É um meio de transporte com vários vagões ligados entre si e pode transportar pessoas ou cargas.</li>
-            <li>É um meio de transporte terrestre que passa por túneis subterrâneos ou por viadutos e realiza a parada
-                em estações designadas.
-            <li>Meio de transporte usado para pedalar em pistas, ciclovias ou parques.</li>
-            <li>É um meio de transporte terrestre grande, com eixos dianteiros e traseiros, geralmente tem entre quatro
-                e dezesseis rodas e, tem uma carreta.</li>
-            <li>Meio de transporte aquático que tem vela, começa com a letra B e tem cinco letras.</li>
-            <li>Meio de transporte aquático que afundou no filme Titanic.</li>
-            <li>Meio de transporte aquático que fica abaixo da água, pode flutuar sob a água e começa com a letra S.
-            </li>
-            <li>Meio de transporte aéreo que tem duas asas, voa e começa com a letra A.</li>
-            <li>Meio de transporte aéreo que tem hélice e começa com a letra H.</li>
-            <li>Meio de transporte aéreo que tem cesto, é movido a ar e começa com a letra B.</li>
-        </ol>
+        <div>
+            <h2>Meios de transportes</h2>
+        </div>
         <table id="tabuleiro" align="center">
             <tr>
                 <td>Ã</td>

@@ -3,7 +3,7 @@ function logar() {
     password = document.getElementById("inputPassword").value;
     if (findByKeyAndValue(usr,password)){
         // alert("Login com Sucesso")
-        window.location.href = "cacaPalavras.html/";
+        window.location.href = "./cacaPalavras.html/";
         // window.location.replace("http://127.0.0.1:5555/sign-in/teste.html");
         // window.location.assign("http://127.0.0.1:5555/sign-in/teste.html");
     }else {

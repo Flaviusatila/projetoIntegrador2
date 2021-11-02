@@ -3,7 +3,6 @@ function iniciaJogo() {
     primeiroclique = false;
     encontradas = 0;
     data = {};
-    document.getElementById("encontradas").innerText = "Encontradas: " + encontradas + "\n Restantes: " + transportes.length;
     for (var i = 0; i < t.rows.length; i++) {
         t.rows[i].id = "linha " + i;
         t.rows[i].dataset.index = i;
