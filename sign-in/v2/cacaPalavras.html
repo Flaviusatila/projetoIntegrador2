@@ -12,7 +12,7 @@
 
 
 <body onload="iniciaJogo()">
-    <div id="jogo" hidden>
+    <div>
         <input type="checkbox" id="check">
         <label for="check">
             <i class="fas fa-bars" id="btn"></i>
@@ -39,9 +39,6 @@
                 </span>
             </a>
         </div>
-
-        <h2 hidden id="parabens">Parabéns!</h2>
-        <button hidden id="btnVoltar">voltar</button>
         <div>
             <h2>Meios de transportes</h2>
         </div>
@@ -216,8 +213,8 @@
             </tr>
     </div>
     <script>
-        var t = document.getElementById("tabuleiro");
-        var transportes, primeiroclique, encontradas, data;
+        
+        var transportes, primeiroclique,data;
         function clique(e) {
             if (transportes.length > 0) {
                 if (primeiroclique == false) {

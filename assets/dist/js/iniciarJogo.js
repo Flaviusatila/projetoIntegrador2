@@ -1,7 +1,7 @@
+var t = document.getElementById("tabuleiro");
 function iniciaJogo() {
-    transportes = ["CARRO", "MOTO", "TREM", "METRÔ", "BICICLETA", "CAMINHÃO", "BARCO", "NAVIO", "SUBMARINO", "AVIÃO", "HELICÓPTERO", "BALÃO"];
+    transportes = ["CARRO", "MOTO", "TREM", "METRÔ", "BICICLETA", "CAMINHÃO", "BARCO"];
     primeiroclique = false;
-    encontradas = 0;
     data = {};
     for (var i = 0; i < t.rows.length; i++) {
         t.rows[i].id = "linha " + i;
@@ -14,7 +14,4 @@ function iniciaJogo() {
             t.rows[i].cells[j].addEventListener("click", clique);
         }
     }
-    document.getElementById("parabens").hidden = true;
-    document.getElementById("jogo").hidden = false;
-    document.getElementById("btnVoltar").hidden = true;
 }
