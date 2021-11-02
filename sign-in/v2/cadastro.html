@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/../assets/dist/css/cadastro.css">
+
+  <script>
+    function index() {
+        window.location.href = "index.html";
+    }
+</script>
+</head>
+
+<body>
+
+  <body>
+    <div class="login-box">
+      <h1>Cadastro</h1>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" id="nomeCompleto" placeholder="Nome Completo">
+      </div>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" id="userName" placeholder="Username">
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="cadastroSenha" placeholder="Senha">
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="confimarSenha" placeholder="Confirmar Senha">
+      </div>
+
+      <input type="button" class="btn" onclick="salvar()" value="Cadastrar">
+      <input type="button" class="btn" onclick="index()" value="Voltar">
+
+      <p class="mt-5 mb-3 text-muted">&copy; Flavius Atila Gama Carvalho Ferreira - 2020</p>
+    </div>
+  </body>
+</body>
+<script src="../../assets/dist/js/cadastro.js"></script>
+
+</html>

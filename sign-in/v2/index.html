@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/../assets/dist/css/index.css">
+    <script>
+        function cadastro() {
+            window.location.href = "cadastro.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" id="inputUserName" placeholder="Username">
+        </div>
+
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="inputPassword" placeholder="Senha">
+        </div>
+
+        <input type="button" class="btn" onclick="logar()" value="Logar">
+        <input type="button" class="btn" onclick="cadastro()" value="Cadastrar">
+
+        <p class="mt-5 mb-3 text-muted">&copy; Flavius Atila Gama Carvalho Ferreira - 2020</p>
+    </div>
+</body>
+<script src="../../assets/dist/js/index.js"></script>
+
+</html>
