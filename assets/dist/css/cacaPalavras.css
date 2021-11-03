@@ -21,7 +21,8 @@ p {
 
 
 table {
-    width: 50%;
+    width: 75%;
+    height: 500px;
     text-align: center;
     margin: auto;
 }
@@ -36,8 +37,9 @@ td {
 td {
     font-weight: bold;
     font-family: monospace;
-    font-size: 1.6em;
+    font-size: 2em;
     color: black;
+    padding: 0.1em 0.3em 0.1em;
 }
 
 td:hover {

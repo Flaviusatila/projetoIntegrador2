@@ -75,6 +75,6 @@ function comparar(data) {
         }, 1000);
     }
     if(acertos == 7){
-        window.location.replace("./../parabens.html");
+        setTimeout( window.location.replace("./../parabens.html"),5000);
     }
 }
