@@ -20,7 +20,7 @@ function iniciaJogo() {
             t.rows[i].cells[j].dataset.encontrada = "false";
             t.rows[i].cells[j].id = "coluna " + j;
             t.rows[i].cells[j].dataset.index = j;
-            t.rows[i].cells[j].textContent = String.fromCharCode(charcode)
+            // t.rows[i].cells[j].textContent = String.fromCharCode(charcode)
             t.rows[i].cells[j].addEventListener("click", clique);
         }
     }
@@ -31,8 +31,8 @@ function iniciaJogo() {
 function adicionarPalavras(tabuleiro, array) {
     for (var p = 0; p < array.length; p++) {
         let letra = array[p].split("")
-        var k = parseInt((p + 1) + Math.random() * 1);
-        var m = parseInt((p + 2) + Math.random() * 12);
+        var k = templates[p][0]
+        var m = templates[p][1]
         if ((letra.length + m) < 22) {
             letra.map((a) => {
                 tabuleiro.rows[k].cells[m++].textContent = a
@@ -53,3 +53,5 @@ function adiconarPerguntas(perguntas) {
         document.getElementById(pergunta).innerHTML = perguntas[index]
     }
 }
+
+const templates = [[4,5],[6,21],[3,12],[0,1],[21,21],[7,11],[6,2]]
