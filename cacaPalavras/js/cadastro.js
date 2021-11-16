@@ -1,25 +1,26 @@
 var listaUsuarios = []
-if(localStorage.getItem("usuario") == null)
-    localStorage.setItem("usuario",[])
+if (localStorage.getItem("usuario") == null)
+    localStorage.setItem("usuario", [])
 function salvar() {
     var usr = {}
     usr.nome = document.getElementById("nomeCompleto").value;
     usr.userName = document.getElementById("userName").value;
     password = document.getElementById("cadastroSenha").value;
     senhaConfirm = document.getElementById("confimarSenha").value;
-
-    if (validarSenha(password, senhaConfirm)) {
-        if (findByKey(usr)) {
-            alert("Usuario já Cadastrado")
-        } else {
-            usr.senha = password
-            // listaUsuarios.join(usr.nome,usr.userName,usr.senha)
-            localStorage.setItem("usuario", [usr.userName, usr.senha, usr.nome])
-            alert("Cadastrado com sucesso!!")
-            window.location.href = "./index.html";
-            // limparCampos()
+    if (validarUsuario(usr.nome, usr.userName))
+        if (validarSenha(password, senhaConfirm)) {
+            if (findByKey(usr)) {
+                alert("Usuario já Cadastrado")
+            } else {
+                usr.senha = password
+                // listaUsuarios.join(usr.nome,usr.userName,usr.senha)
+                localStorage.setItem("usuario", [usr.userName, usr.senha, usr.nome])
+                alert("Cadastrado com sucesso!!")
+                window.location.href = "./index.html";
+                limparCampos()
+            }
         }
-    }
+
 }
 
 
@@ -44,3 +45,6 @@ function validarSenha(a, e) {
     return a == e ? true : alert("As senhas estao diferentes")
 }
 
+function validarUsuario(a, e) {
+    return a != "" && e != "" ? true : alert("Usuario ou Nome Completo Inválidos")
+}

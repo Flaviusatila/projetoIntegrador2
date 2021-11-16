@@ -1,6 +1,5 @@
 var t = document.getElementById("tabuleiro");
 var aleatorio = parseInt(Math.random() * 4)
-
 function iniciaJogo() {
     respostas = respostasRandom[aleatorio]
     perguntas = perguntasRandom[aleatorio]
