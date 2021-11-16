@@ -157,7 +157,7 @@
     <div id="jogo" hidden>
         <h2 hidden id="parabens">Parabéns!</h2>
         <button hidden id="btnVoltar">voltar</button>
-        <h2>Meios de transportes</h2>
+        <h2>Meios de respostas</h2>
         <p id="encontradas"></p>
         <ol id="dicas">
             <h4 style="text-align:center;">Dicas</h4>
@@ -349,9 +349,9 @@
     </div>
     <script>
         var t = document.getElementById("tabuleiro");
-        var transportes, primeiroclique, encontradas, data;
+        var respostas, primeiroclique, encontradas, data;
         function clique(e) {
-            if (transportes.length > 0) {
+            if (respostas.length > 0) {
                 if (primeiroclique == false) {
                     data.colunainicial = parseInt(e.target.dataset.index);
                     data.linhainicial = parseInt(e.target.parentElement.dataset.index);

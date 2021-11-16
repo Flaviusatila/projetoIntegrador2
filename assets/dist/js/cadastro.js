@@ -1,7 +1,8 @@
 var listaUsuarios = []
+if(localStorage.getItem("usuario") == null)
+    localStorage.setItem("usuario",[])
 function salvar() {
     var usr = {}
-
     usr.nome = document.getElementById("nomeCompleto").value;
     usr.userName = document.getElementById("userName").value;
     password = document.getElementById("cadastroSenha").value;

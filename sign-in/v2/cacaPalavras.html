@@ -35,7 +35,7 @@
             </a>
         </div>
         <div>
-            <h2>Meios de transportes</h2>
+            <h2 id="pergunta0"></h2>
         </div>
         <table id="tabuleiro">
             <tr>
@@ -327,10 +327,10 @@
         </table>
     </div>
     <script>
-
-        var transportes, primeiroclique, data;
+       
+        var respostas, primeiroclique, data;
         function clique(e) {
-            if (transportes.length > 0) {
+            if (respostas.length > 0) {
                 if (primeiroclique == false) {
                     data.colunainicial = parseInt(e.target.dataset.index);
                     data.linhainicial = parseInt(e.target.parentElement.dataset.index);
@@ -381,5 +381,4 @@
 </body>
 <script src="/../assets/dist/js/iniciarJogo.js"></script>
 <script src="/../assets/dist/js/mecanicaJogo.js"></script>
-
 </html>

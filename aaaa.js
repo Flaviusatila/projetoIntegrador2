@@ -1,5 +1,3 @@
-var db = openDatabase("MeuBanco","2.0", "Mybase", 4048);
-var cont;
 criar = async () => {
         await db.transaction(function(levantarBanco){
             levantarBanco.executeSql("CREATE TABLE users (ID PRIMARY KEY, email TEXT, senha TEXT)");

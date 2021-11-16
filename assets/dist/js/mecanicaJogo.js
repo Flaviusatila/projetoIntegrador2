@@ -37,13 +37,13 @@ function comparar(data) {
             selecionados.elementos.push(td);
         });
     }
-    var palavraselecionada = transportes.includes(selecionados.palavra) 
+    var palavraselecionada = respostas.includes(selecionados.palavra) 
                             ? selecionados.palavra 
-                            : transportes.includes(selecionados.palavra.split("").reverse().join("")) 
+                            : respostas.includes(selecionados.palavra.split("").reverse().join("")) 
                             ? selecionados.palavra.split("").reverse().join('') 
                             : false;
     if (palavraselecionada) {
-        numeroPergunta = "pergunta" + (transportes.findIndex((e) => e == palavraselecionada) + 1 )
+        numeroPergunta = "pergunta" + (respostas.findIndex((e) => e == palavraselecionada) + 1 )
         document.getElementById(numeroPergunta).style = "text-decoration:line-through;"        
        
         setTimeout(function () {
@@ -75,6 +75,6 @@ function comparar(data) {
         }, 1000);
     }
     if(acertos == 7){
-        setTimeout( window.location.replace("./../parabens.html"),5000);
+        setTimeout( window.location.replace("./../parabens.html"),10000);
     }
 }
