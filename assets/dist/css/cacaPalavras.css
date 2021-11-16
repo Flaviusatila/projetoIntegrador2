@@ -1,3 +1,7 @@
+*{
+    background-color: #000;
+    color: #FFF;
+}
 h1,
 h2,
 p{
@@ -30,20 +34,22 @@ table {
 table,
 tr,
 td {
-    border: 1px solid black;
-    background-color: white;
+    /* border: 1px solid black;
+    background-color: white; */
+    
 }
 
 td {
     font-weight: bold;
     font-family: monospace;
     font-size: 2em;
-    color: black;
     padding: 0.1em 0.3em 0.1em;
+    color: #FFF;
 }
 
 td:hover {
-    background-color: #F9D387;
+    /* background-color: #F9D387; */
+    text-decoration: underline overline;
     cursor: pointer;
 }
 
