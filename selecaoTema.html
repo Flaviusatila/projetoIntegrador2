@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Seleção Tema</title>
+    <script>
+        function tema(temaEscolhido) {
+            switch (temaEscolhido) {
+                case 'transporte':
+                    {
+                       localStorage.setItem('numero', parseInt(Math.random() * 3))
+                       break;
+                    }
+                case 'paises':
+                    {
+                       localStorage.setItem('numero', (3 + parseInt(Math.random() * 3)))
+                       break;
+                    }
+                case 'comidas':
+                    {
+                       localStorage.setItem('numero', (6 + parseInt(Math.random() * 3)))
+                       break;
+                    }
+                case 'esportes':
+                    {
+                       localStorage.setItem('numero', (9 + parseInt(Math.random() * 3)))
+                       break;
+                    }
+               
+            }
+            window.location.href = "./cacaPalavras.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Seleção Tema</h1>
+        <input type="button" class="btn" onclick="tema('transporte')" value="Transporte">
+        <input type="button" class="btn" onclick="tema('paises')" value="Países">
+        <input type="button" class="btn" onclick="tema('comidas')" value="Comidas">
+        <input type="button" class="btn" onclick="tema('esportes')" value="Esportes">
+    </div>
+</body>
+
+</html>
